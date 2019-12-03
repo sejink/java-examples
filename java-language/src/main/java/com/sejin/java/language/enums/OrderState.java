@@ -1,4 +1,4 @@
-package com.sejin.enums;
+package com.sejin.java.language.enums;
 
 public enum OrderState {
     PAYMENT_WAITING (1) {
