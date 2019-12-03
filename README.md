@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/sejink/java-examples.svg?branch=master)](https://travis-ci.com/sejink/java-examples)
 
-## Create a project
+## Create a project (on Bash)
 
 ### Generate with maven plugin
 
