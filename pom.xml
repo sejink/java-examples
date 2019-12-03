@@ -14,5 +14,6 @@
     <modules>
         <module>junit5-jupiter-starter-maven-practice</module>
         <module>tdd-practice</module>
+        <module>java-language</module>
     </modules>
 </project>
