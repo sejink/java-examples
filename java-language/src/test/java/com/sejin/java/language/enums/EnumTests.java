@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static com.sejin.java.language.enums.OrderState.PAYMENT_WAITING;
 import static com.sejin.java.language.enums.OrderState.SHIPPED;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class EnumTests {
 
@@ -31,6 +32,13 @@ public class EnumTests {
 
     @Test
     void overridingToString() {
-       assertThat(PAYMENT_WAITING.toString()).isEqualTo("1");
+        assertThat(PAYMENT_WAITING.toString()).isEqualTo("1");
+    }
+
+    @Test
+    void throwException() {
+        assertThatThrownBy(() -> {
+            OrderState.valueOf("NONE_EXIST_CONST");
+        }).isInstanceOf(IllegalArgumentException.class);
     }
 }
