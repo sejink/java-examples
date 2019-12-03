@@ -4,8 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.sejin.java.language.enums.OrderState.PAYMENT_WAITING;
 import static com.sejin.java.language.enums.OrderState.SHIPPED;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.assertj.core.api.Assertions.*;
 
 public class EnumTests {
 
@@ -40,5 +39,33 @@ public class EnumTests {
         assertThatThrownBy(() -> {
             OrderState.valueOf("NONE_EXIST_CONST");
         }).isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
+    void separateExceptionFromAssertion() {
+
+        // when
+        Throwable thrown = catchThrowable(() -> {
+            OrderState.valueOf("NONE_EXIST_CONST");
+        });
+
+        // then
+        assertThat(thrown).isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
+    void usingAssertThatExceptionOfType() {
+        assertThatExceptionOfType(IllegalArgumentException.class)
+                .isThrownBy(() -> {
+                    OrderState.valueOf(("NONE_EXIST_CONST"));
+                });
+    }
+
+    @Test
+    void usingAssertThatCommonTypes() {
+        assertThatIllegalArgumentException()
+                .isThrownBy(() -> {
+                    OrderState.valueOf("NONE_EXIST_CONST");
+                });
     }
 }
