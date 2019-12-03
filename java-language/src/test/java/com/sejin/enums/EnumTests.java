@@ -1,9 +1,10 @@
-package com.sejin;
+package com.sejin.enums;
 
+import com.sejin.enums.OrderState;
 import org.junit.jupiter.api.Test;
 
-import static com.sejin.OrderState.PAYMENT_WAITING;
-import static com.sejin.OrderState.SHIPPED;
+import static com.sejin.enums.OrderState.PAYMENT_WAITING;
+import static com.sejin.enums.OrderState.SHIPPED;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class EnumTests {
