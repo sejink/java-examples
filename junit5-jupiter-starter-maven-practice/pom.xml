@@ -16,6 +16,7 @@
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
         <maven.surefile.plugin.version>2.22.2</maven.surefile.plugin.version>
+        <assertJ.version>3.11.1</assertJ.version>
     </properties>
 
     <dependencies>
@@ -29,7 +30,7 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.11.1</version>
+            <version>${assertJ.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
