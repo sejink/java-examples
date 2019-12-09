@@ -1,7 +1,7 @@
 # Spring Boot Example Projects
 
 ## Create a project
-### Generate a project with spring initializr
+### Generate a project from spring initializr site
 
 https://start.spring.io/
 
@@ -12,7 +12,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=web,data-jpa \
 -d groupId=com.sejin \
 -d artifactId=jpa \
 -d language=java  \
--d name=spring-data-jpa-example
+-d name=spring-example
 -d type=maven-project \
--d baseDir=spring-data-jpa-example | tar -xzvf -
+-d baseDir=spring-example | tar -xzvf -
 ```
