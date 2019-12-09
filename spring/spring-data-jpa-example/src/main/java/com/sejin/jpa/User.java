@@ -14,7 +14,7 @@ public class User {
     private String lastName;
     private String firstName;
 
-    private User() {
+    protected User() {
     }
 
     public User(String username, String lastName, String firstName) {
