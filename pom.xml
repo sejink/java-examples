@@ -16,5 +16,6 @@
         <module>tdd-practice</module>
         <module>java-language</module>
         <module>spring/spring-data-jpa-example</module>
+        <module>spring/spring-restdocs-example</module>
     </modules>
 </project>

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sejin</groupId>
-	<artifactId>jpa</artifactId>
+	<artifactId>spring-data-jpa-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-data-jpa-example</name>
 	<description></description>
