@@ -1,4 +1,4 @@
-package com.sejin.restdocs;
+package com.sejin.jpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

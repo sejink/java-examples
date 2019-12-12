@@ -1,4 +1,4 @@
-package com.sejin.restdocs;
+package com.sejin.jpa;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
