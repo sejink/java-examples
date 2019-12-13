@@ -22,7 +22,7 @@ import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.docu
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(HelloController.class)
+@WebMvcTest
 @AutoConfigureRestDocs
 class SpringRestdocsExampleApplicationTests {
 
@@ -68,6 +68,7 @@ class SpringRestdocsExampleApplicationTests {
                         responseFields(
                                 fieldWithPath("message").description("The welcome message for the user.")
                         )))
-                .assertThat().statusCode(is(200));
+                .assertThat().statusCode(is(200))
+                .assertThat(content().string(containsString("Hello, restdocs")));
     }
 }
