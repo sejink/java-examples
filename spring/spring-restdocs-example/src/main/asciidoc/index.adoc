@@ -10,22 +10,25 @@ Sample application demonstrating how to use Spring REST Docs with JUnit 5.
 documentation snippets.
 
 curl-request
-include::{snippets}/hello/curl-request.adoc[]
+include::{snippets}/test/curl-request.adoc[]
 
 http-request
-include::{snippets}/hello/http-request.adoc[]
+include::{snippets}/test/http-request.adoc[]
 
 http-response
-include::{snippets}/hello/http-response.adoc[]
+include::{snippets}/test/http-response.adoc[]
 
 httpie-reuqes
-include::{snippets}/hello/httpie-request.adoc[]
+include::{snippets}/test/httpie-request.adoc[]
 
 request-body
-include::{snippets}/hello/request-body.adoc[]
+include::{snippets}/test/request-body.adoc[]
 
 response-body
-include::{snippets}/hello/response-body.adoc[]
+include::{snippets}/test/response-body.adoc[]
 
 response-fields
-include::{snippets}/hello/response-fields.adoc[]
+include::{snippets}/test/response-fields.adoc[]
+
+path-parameters
+include::{snippets}/test/path-parameters.adoc[]
