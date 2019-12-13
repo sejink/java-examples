@@ -3,8 +3,9 @@ Sejin Kim;
 :doctype: book
 :icons: font
 :source-highlighter: highlightjs
+:toc: left
 
-Sample application demonstrating how to use Spring REST Docs with JUnit 5.
+== Sample application demonstrating how to use Spring REST Docs with JUnit 5.
 
 `SpringRestdocsExampleApplicationTests` makes a call to a very simple service and produces three
 documentation snippets.
