@@ -40,7 +40,7 @@ class SpringRestdocsExampleApplicationTests {
                 .andExpect(content().string(containsString("Hello, restdocs")))
                 .andDo(document("hello",
                         pathParameters(
-                                parameterWithName("name").description("이름")
+                                parameterWithName("name").description("name")
                         ),
                         responseFields(
                                 fieldWithPath("message").description("The welcome message for the user.")
