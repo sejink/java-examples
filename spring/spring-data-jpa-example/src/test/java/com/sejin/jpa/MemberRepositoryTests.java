@@ -7,16 +7,16 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
-public class UserRepositoryTests {
+public class MemberRepositoryTests {
 
     @Autowired
-    private UserRepository userRepository;
+    private MemberRepository memberRepository;
 
     @Test
     void findSavedUserById() {
-        User user = new User("user1", "sejin", "kim");
-        user = userRepository.save(user);
-        assertThat(userRepository.findById(user.getUsername()).get())
-                .isEqualToComparingFieldByField(user);
+        Member member = new Member ("user1", "sejin", "kim");
+        member = memberRepository.save(member);
+        assertThat(memberRepository.findById(member.getUsername()).get())
+                .isEqualToComparingFieldByField(member);
     }
 }

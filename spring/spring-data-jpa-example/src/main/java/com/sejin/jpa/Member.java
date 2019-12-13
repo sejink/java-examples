@@ -7,17 +7,17 @@ import javax.persistence.Id;
 
 @Entity
 @Getter
-public class User {
+public class Member{
 
     @Id
     private String username;
     private String lastName;
     private String firstName;
 
-    protected User() {
+    protected Member() {
     }
 
-    public User(String username, String lastName, String firstName) {
+    public Member(String username, String lastName, String firstName) {
         this.username = username;
         this.lastName = lastName;
         this.firstName = firstName;
