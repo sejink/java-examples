@@ -12,13 +12,12 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
-import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.containsString;
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
 import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
 import static org.springframework.restdocs.request.RequestDocumentation.parameterWithName;
 import static org.springframework.restdocs.request.RequestDocumentation.pathParameters;
-import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -28,9 +27,6 @@ class SpringRestdocsExampleApplicationTests {
 
     @Autowired
     private MockMvc mockMvc;
-
-    @Autowired
-    private RequestSpecification documentationSpec;
 
     @Test
     @DisplayName("hello test")
@@ -68,7 +64,7 @@ class SpringRestdocsExampleApplicationTests {
                         responseFields(
                                 fieldWithPath("message").description("The welcome message for the user.")
                         )))
-                .assertThat().statusCode(is(200))
+                .expect(status().isOk())
                 .assertThat(content().string(containsString("Hello, restdocs")));
     }
 }
